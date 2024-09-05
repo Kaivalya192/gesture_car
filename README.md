@@ -1,11 +1,11 @@
 # Hand Gesture Controlled Car
 
 ## Introduction
-- Forward:- ![fd](Media/fd.jpg)
-- Backward:- ![bk](Media/back.jpg)
-- Left:- ![lt](Media/lt.jpg)
-- Right:- ![rt](Media/rt.jpg)
-- Stop:- ![st](Media/stop.jpg)
+- Forward:- ![fd](MEDIA/fd.jpg)
+- Backward:- ![bk](MEDIA/back.jpg)
+- Left:- ![lt](MEDIA/lt.jpg)
+- Right:- ![rt](MEDIA/rt.jpg)
+- Stop:- ![st](MEDIA/stop.jpg)
 
 ## Components Used
 - Laptop for running the code in its camera
@@ -19,7 +19,7 @@
   - `espnow.h`
   - `Wifi.h`
 
-- `pip install opencv-python mediapipe pyserial`
+- `pip install opencv-python MEDIApipe pyserial`
 
 
 ## How to run the code
@@ -29,4 +29,4 @@
 - Run the `cv_sender_serial.py` on the laptop (cuation: change the COM port in the code according to the ESP32 connection)
 
 ## Working
-- ![Click Here](Media/video.gif)
+- ![Click Here](MEDIA/video.gif)
