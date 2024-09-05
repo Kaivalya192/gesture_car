@@ -32,12 +32,16 @@ while cap.isOpened():
     image = cv2.flip(image, 1)
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(image_rgb)
+    gesture_detected = False
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
             gesture = detect_gesture(hand_landmarks.landmark)
             if gesture:
-                print(gesture)            
+                print(gesture) 
+                gesture_detected = True           
             mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)    
+    if not gesture_detected:
+        print("stop")
     cv2.imshow('Hand Gesture Control', image)
     if cv2.waitKey(5) & 0xFF == 27:  
         break
